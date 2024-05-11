@@ -16,7 +16,7 @@
     "Los Angeles",
     "New York"
   ],
-  "properties": {
+    "properties": {
     "age": "29 years",
     "salary": "1000 USD"
   }

@@ -1,14 +1,16 @@
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import java.io.File;
+import java.io.ObjectStreamException;
 import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JacksonObjectMapperExample {
 
@@ -20,15 +22,15 @@ public class JacksonObjectMapperExample {
         //create ObjectMapper instance
         ObjectMapper objectMapper = new ObjectMapper();
 
+        //configure Object mapper for pretty print
+        ObjectMapper configure = objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+
         //convert json string to object
         Employee emp = objectMapper.readValue(jsonData, Employee.class);
-
         System.out.println("Employee Object\n" + emp);
 
         //convert Object to json string
         Employee emp1 = createEmployee();
-        //configure Object mapper for pretty print
-        ObjectMapper configure = objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
 
         //writing to console, can write to any output stream such as file
         StringWriter stringEmp = new StringWriter();
@@ -64,6 +66,4 @@ public class JacksonObjectMapperExample {
 
         return emp;
     }
-
-
 }
