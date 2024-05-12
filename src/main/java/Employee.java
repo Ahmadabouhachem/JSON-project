@@ -3,7 +3,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Employee {
-
     private int id;
     private String name;
     private boolean permanent;

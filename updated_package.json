@@ -1,0 +1,28 @@
+{
+  "id": 10,
+  "name": "ahmad",
+  "University": "IU Information",
+  "newAddress": {
+    "house number": 4,
+    "stair": 1,
+    "street": "Lotte-profohs-weg",
+    "stair case ": 3
+  },
+  "phone number": [
+    436645107169,
+    43123123123
+  ],
+  "number version2": [
+    436645107169,
+    43123123123
+  ],
+  "description": [
+    "ich werde bald umziehen",
+    "ich suche mich eine gute Arbeit"
+  ],
+  "newClassAddress": {
+    "street": "muhrengasse",
+    "city": "vienna",
+    "zipcode": 1100
+  }
+}

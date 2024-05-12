@@ -12,7 +12,6 @@ public class ReadingJson {
 
     public static void main(String[] args) throws IOException {
 
-
         //read json file data to String
         byte[] jsonData = Files.readAllBytes(Paths.get("package.json"));
 
@@ -36,9 +35,11 @@ public class ReadingJson {
         //reading a specifics value from object in json file
         Map<String, Object> map = objectMapper.convertValue(rootNode, Map.class);
         Map<String, Object> addressTest = (Map<String, Object>) map.get("address");
+
         String street = (String) addressTest.get("street");
         String city = (String) addressTest.get("city");
         int zipcode = (int) addressTest.get("zipcode");
+
         System.out.println("______________");
         System.out.println("street: "+ street);
         System.out.println("city: "+ city);
